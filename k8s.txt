@@ -1,0 +1,25 @@
+
+disable swap
+install docker
+install kubeadm, kubelet, kubectl
+
+kubeadm init --pod-network-cidr=10.244.0.0/16  (ip need to be same as flannel configuration network)
+
+// add network addon (callico | flannel)
+
+kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+--  https://github.com/kubernetes/kubernetes/issues/70202
+/run/flannel/subnet.env
+
+FLANNEL_NETWORK=10.244.0.0/16
+FLANNEL_SUBNET=10.244.0.1/24
+FLANNEL_MTU=1450
+FLANNEL_IPMASQ=true
+
+
+- flannel with firewall enable
+mkdir -p /opt/cni/bin
+curl -O -L https://github.com/containernetworking/plugins/releases/download/v1.2.0/cni-plugins-linux-amd64-v1.2.0.tgz
+tar -C /opt/cni/bin -xzf cni-plugins-linux-amd64-v1.2.0.tgz
+
+
