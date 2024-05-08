@@ -1,0 +1,13 @@
+- ACID
+1, A -> Automicity
+2, C -> Eventual Consistancy + Hightly Consistancy
+3, I -> Isolation** Understand and know how to handle Read phenomera (dirty, phantom, non-repeatable, serialization anomaly,...)
+4, D -> Durability
+  
+- Internal
+1, How database and index store?
+2, Understand row-based + column-based --> Pros and Cons
+3, Primary (clustering) + Secondary Key
+4, Database pages
+
+- Indexing
