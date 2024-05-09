@@ -12,6 +12,6 @@
 
 - Indexing
 1. Type of index, usecase for each one
-2. Scan nodes: Bitmap scan, index scan, table scan, index-only scan,...
+2. Scan nodes: Bitmap scan, index scan, table scan, index-only scan,... -> https://pganalyze.com/docs/explain/scan-nodes/sequential-scan
 3. Key, Non-key Column index
-4. 
+4. Bloom Filter https://www.postgresql.org/docs/current/bloom.html
