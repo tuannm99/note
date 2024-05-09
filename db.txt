@@ -5,9 +5,10 @@
 4, D -> Durability
   
 - Internal
-1, How database and index store?
-2, Understand row-based + column-based --> Pros and Cons
-3, Primary (clustering) + Secondary Key
-4, Database pages
+1, Database pages
+2, How database and index are stored?
+3, Understand row-based + column-based --> Pros and Cons
+4, Primary (clustering) + Secondary Key
 
 - Indexing
+1. Type of index, usecase for each one
