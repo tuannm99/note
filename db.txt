@@ -12,3 +12,6 @@
 
 - Indexing
 1. Type of index, usecase for each one
+2. Scan nodes: Bitmap scan, index scan, table scan, index-only scan,...
+3. Key, Non-key Column index
+4. 
