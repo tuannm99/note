@@ -16,3 +16,4 @@
 3. Key, Non-key Column index
 4. Bloom Filter https://www.postgresql.org/docs/current/bloom.html
 5. Combine indexes
+6. create index concurrently
