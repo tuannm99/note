@@ -17,4 +17,13 @@
 4. Bloom Filter https://www.postgresql.org/docs/current/bloom.html
 5. Combine indexes
 6. Create index concurrently
-7. Full table scan, B-tree & B+tree tradeoff 
+7. Full table scan, B-tree & B+tree -> tradeoff
+
+- Partitioning
+1. Horizontal - Vertical
+2. Types of partitioning: range, list, hash
+3. Advantages and disavantages -> tradeoff
+4. Automation partitioning
+5. Difference to Sharding?
+
+- Sharding
