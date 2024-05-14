@@ -1,3 +1,4 @@
+***** note
 
 disable swap
 install docker
@@ -31,3 +32,44 @@ tar -C /opt/cni/bin -xzf cni-plugins-linux-amd64-v1.2.0.tgz
 - local dns -> service comunication using dns instead of ip
 
 ** helm -> package manager for k8s manifest (there are many operation that packaging by helm. We can take advatanges of it for deployment)
+
+
+
+--------------COMAND--------------
+Docker version 26.1.2, build 211e74b
+Kubernetes v1.30.0
+Client Version: v1.30.0
+
+* pre-setup
+
+1. Docker
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+2. K8s
+
+sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+
+sudo apt-get update
+sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
+
+sudo systemctl enable --now kubelet
+
+rm /etc/containerd/config.toml
+systemctl restart containerd
+
+3. then start init by using kubeadm
