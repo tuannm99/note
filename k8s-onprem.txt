@@ -73,3 +73,18 @@ rm /etc/containerd/config.toml
 systemctl restart containerd
 
 3. then start init by using kubeadm
+
+
+# some problems in kubelet and kubeadm or kubectl version make cluster shutdown. Fixed it --> Content of file /etc/containerd/config.toml
+"""
+version = 2
+[plugins]
+  [plugins."io.containerd.grpc.v1.cri"]
+   [plugins."io.containerd.grpc.v1.cri".containerd]
+      [plugins."io.containerd.grpc.v1.cri".containerd.runtimes]
+        [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
+          runtime_type = "io.containerd.runc.v2"
+          [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
+            SystemdCgroup = true
+
+"""
