@@ -27,3 +27,13 @@
 5. Difference to Sharding?
 
 - Sharding
+1. how it works?
+2. Consistent hashing
+3. Pg sharding setup
+4. CRUD on Shard
+
+- Lock
+1. Exclusive + Shard lock
+2. Dead lock
+3. Two-phrase lock
+4. Connection polling
