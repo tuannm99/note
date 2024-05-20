@@ -36,4 +36,14 @@
 1. Exclusive + Shard lock
 2. Dead lock
 3. Two-phrase lock
-4. Connection polling
+4. Connection pooling
+
+- Replication
+1. Primary/replication (Leader/follower or Master/Slave)
+2. Multi master
+3. Async/Sync Replication
+4. => Pros , cons
+
+- DB Cursor
+
+- 
