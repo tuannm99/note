@@ -1,0 +1,14 @@
+- Step to creating multi-tenant architecture base on expirenced (POD Platform, Book)
+
+I. Ingredents
+1. Application Plane (SaaS like)
+- Services
+- Tenent provision
+2. Control Plane (admin services, configuring registered tenent)
+- Onboarding: Steps for provising Infrastructure to a registered tenent.
+- Tenant Management
+- Identity
+- Billing
+- Metrics
+- User Management
+
