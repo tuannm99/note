@@ -12,3 +12,6 @@ I. Ingredents
 - Metrics
 - User Management
 
+II. Deployment Strategy
+- Silo Model: independant deployment
+- Pool Model: shared deployment
